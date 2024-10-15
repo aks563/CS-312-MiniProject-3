@@ -1,0 +1,24 @@
+{
+  "name": "cs-312-miniproject-1",
+  "version": "1.0.0",
+  "description": "First project for NAU's CS312 course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmb2333/CS-312-MiniProject-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmb2333/CS-312-MiniProject-1/issues"
+  },
+  "homepage": "https://github.com/cmb2333/CS-312-MiniProject-1#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  }
+}

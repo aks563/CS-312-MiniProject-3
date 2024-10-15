@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <% if (user) { %>
+        <p>Welcome, <%= user %>! <a href="/logout">Logout</a></p>
+        <a href="/newPost">Create New Post</a>
+    <% } else { %>
+        <a href="/signin">Sign In</a> | <a href="/register">Register</a>
+    <% } %>
+    
+    <ul>
+        <% posts.forEach(post => { %>
+            <li>
+                <h2><%= post.title %></h2>
+                <p><%= post.content %></p>
+                <% if (user) { %>
+                    <form action="/edit/<%= post.id %>" method="GET">
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form action="/delete/<%= post.id %>" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                <% } %>
+            </li>
+        <% }) %>
+    </ul>
+
+
+
+
